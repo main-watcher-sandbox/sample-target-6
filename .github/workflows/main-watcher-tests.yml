@@ -25,11 +25,11 @@ permissions:
 jobs:
   tests:
     name: main-watcher-tests
-    uses: main-watcher-sandbox/gate/.github/workflows/run-integration-tests.yml@main
+    uses: main-watcher-sandbox/gate/.github/workflows/run-integration-tests.yml@ts-s16-long-timeout
     with:
       sha: ${{ inputs.sha }}
       check-run-id: ${{ inputs.check_run_id }}
-      timeout-minutes: 30
+      timeout-minutes: 2
       # test-command: dotnet test --no-restore
       # restore-command: dotnet restore
       # results-glob: "**/TestResults/*.ctrf.json"
